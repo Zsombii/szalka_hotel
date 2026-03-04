@@ -1,0 +1,1255 @@
+/* SZALKA HOTEL - PRÉMIUM STÍLUS */
+:root {
+    --gold: #C5A059;
+    --dark-blue: #0A1E3C;
+    --light-gold: #E5D5B0;
+    --cream: #F8F5F0;
+    --charcoal: #2C2C2C;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--white);
+    color: var(--charcoal);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========== EGYSÉGES HERO SZEKCIÓ ========== */
+.hero-unified {
+    position: relative;
+    background: linear-gradient(rgba(10, 30, 60, 0.7), rgba(10, 30, 60, 0.7)), 
+                url('recepcio.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Top bar átlátszó háttérrel */
+.hero-unified .top-bar {
+    background: transparent;
+    border-bottom: 3px solid rgba(201, 141, 30, 0.788);
+}
+
+.hero-unified .top-bar .lang,
+.hero-unified .top-bar .separator,
+.hero-unified .top-bar .rating-text {
+    color: var(--white);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.hero-unified .top-bar .stars {
+    color: var(--gold);
+}
+
+/* Main header átlátszó háttérrel */
+.hero-unified .main-header {
+    background: transparent;
+}
+
+.hero-unified .hotel-name h1,
+.hero-unified .hotel-name .stars,
+.hero-unified .hotel-name .location {
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+#city-gold{
+    color: var(--gold);
+}
+
+.hero-unified .hotel-name .stars {
+    color: var(--gold);
+}
+
+.hero-unified .nav-wrapper {
+    background: transparent;
+    border-top: 1px solid rgba(201, 141, 30, 0.5);
+    border-bottom: 1px solid rgba(201, 141, 30, 0.5);
+}
+
+.hero-unified .main-nav a {
+    color: var(--white);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.hero-unified .main-nav a:hover,
+.hero-unified .main-nav a.active {
+    color: var(--gold);
+    border-bottom: 2px solid var(--gold);
+}
+
+/* Egységes hero tartalom */
+.hero-content-unified {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    padding: 40px 20px;
+}
+
+.hero-content-unified h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    letter-spacing: 4px;
+    color: var(--white);
+}
+
+.hero-content-unified p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    letter-spacing: 6px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.hero-content-unified .btn-premium {
+    background: var(--gold);
+    color: var(--dark-blue);
+    border: 2px solid var(--gold);
+}
+
+.hero-content-unified .btn-premium:hover {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+/* ========== TOP BAR - PONTOSAN MINT A KÉPEN ========== */
+.top-bar {
+    background: var(--dark-blue);
+    color: var(--white);
+    padding: 10px 0;
+    border-bottom: 2px solid var(--gold);
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.lang {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: var(--white);
+    opacity: 0.9;
+}
+
+.lang.active {
+    color: var(--white);
+    font-weight: 600;
+    opacity: 1;
+}
+
+.separator {
+    color: var(--white);
+    opacity: 0.5;
+    font-size: 13px;
+}
+
+.hotel-rating .stars {
+    color: var(--gold);
+    letter-spacing: 4px;
+    font-size: 14px;
+}
+
+.rating-text {
+    display: none;
+}
+
+/* ========== MAIN HEADER ========== */
+.main-header {
+    background: var(--white);
+    padding: 30px 0 20px 0;
+}
+
+.hotel-name {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hotel-name h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: 10px;
+    color: var(--dark-blue);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.hotel-name .stars {
+    color: var(--gold);
+    font-size: 20px;
+    letter-spacing: 8px;
+    margin-bottom: 8px;
+}
+
+.hotel-name .location {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 12px;
+    color: var(--gold);
+    text-transform: uppercase;
+    display: block;
+}
+
+/* ========== NAVIGÁCIÓ ========== */
+.nav-wrapper {
+    border-top: 1px solid #E0E0E0;
+    border-bottom: 1px solid #E0E0E0;
+    margin-top: 20px;
+    background: var(--white);
+    width: 100%;
+    overflow: visible;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px 30px;
+    padding: 15px 20px;
+    margin: 0;
+}
+
+.main-nav a {
+    color: var(--charcoal);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    padding: 8px 0;
+    white-space: nowrap;
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--gold);
+    border-bottom: 2px solid var(--gold);
+}
+
+/* ========== HERO SECTION (eredeti, más oldalakon használható) ========== */
+.hero-premium {
+    background: linear-gradient(rgba(10, 30, 60, 0.8), rgba(10, 30, 60, 0.8)), 
+                url('recepcio.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    letter-spacing: 4px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    letter-spacing: 6px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+/* ========== GOMBOK ========== */
+.btn-premium {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--dark-blue);
+    padding: 16px 48px;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: 0.3s;
+    border: 2px solid var(--gold);
+}
+
+.btn-premium:hover {
+    background: transparent;
+    color: var(--gold);
+    border: 2px solid var(--gold);
+}
+
+.btn-small {
+    padding: 12px 32px !important;
+    font-size: 12px !important;
+    cursor: pointer;
+}
+
+.btn-outline {
+    background: transparent !important;
+    color: var(--white) !important;
+    border-color: var(--white) !important;
+    margin-top: 20px;
+}
+
+.btn-outline:hover {
+    background: var(--gold) !important;
+    color: var(--dark-blue) !important;
+    border-color: var(--gold) !important;
+}
+
+.btn-dark {
+    background: var(--dark-blue) !important;
+    color: var(--white) !important;
+    border-color: var(--dark-blue) !important;
+}
+
+.btn-dark:hover {
+    background: var(--gold) !important;
+    border-color: var(--gold) !important;
+    color: var(--dark-blue) !important;
+}
+
+/* ========== ROOMS SECTION ========== */
+.rooms-section {
+    padding: 80px 0;
+    background: var(--cream);
+}
+
+.rooms-section h2 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+    letter-spacing: 4px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--gold);
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.room-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.room-card {
+    background: var(--white);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.3s;
+    border: 1px solid rgba(197, 160, 89, 0.1);
+}
+
+.room-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(197, 160, 89, 0.15);
+    border-color: var(--gold);
+}
+
+.room-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.room-card:hover img {
+    transform: scale(1.05);
+}
+
+.room-card-content {
+    padding: 30px;
+}
+
+.room-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+}
+
+.room-number {
+    color: var(--gold);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.room-description {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.price {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin: 20px 0;
+}
+
+.price small {
+    font-size: 14px;
+    font-weight: 400;
+    color: #999;
+    margin-left: 5px;
+}
+
+.rooms-link {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.rooms-link a {
+    color: var(--gold);
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-decoration: none;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+.rooms-link a:hover {
+    opacity: 0.8;
+    letter-spacing: 4px;
+}
+
+.no-rooms {
+    grid-column: 1/-1;
+    text-align: center;
+    padding: 60px;
+    background: var(--white);
+}
+
+.no-rooms h3 {
+    font-size: 24px;
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+}
+
+.no-rooms p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* ========== WELLNESS SECTION ========== */
+.wellness-section {
+    padding: 80px 0;
+    background: linear-gradient(rgba(10,30,60,0.8), rgba(10,30,60,0.8)), 
+                url('img/masszazshatter.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    color: var(--white);
+}
+
+.wellness-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: var(--gold);
+}
+
+.wellness-text {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 30px auto;
+    line-height: 1.8;
+}
+
+/* ========== GOLD DIVIDER ========== */
+.gold-divider {
+    width: 100px;
+    height: 2px;
+    background: var(--gold);
+    margin: 30px auto;
+}
+
+/* ========== GYEREKVILÁG SZEKCIÓ ========== */
+.kids-section {
+    padding: 80px 0;
+    background: var(--cream);
+}
+
+.kids-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.kids-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.kids-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.kids-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.kids-images img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.image-offset {
+    margin-top: 40px;
+}
+
+/* ========== VÉLEMÉNYEK ========== */
+.testimonials-section {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.testimonial-card {
+    background: var(--cream);
+    padding: 40px 30px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(197, 160, 89, 0.1);
+}
+
+.testimonial-card .stars {
+    color: var(--gold);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.testimonial-author {
+    font-weight: 700;
+    color: var(--dark-blue);
+}
+
+.testimonial-date {
+    font-size: 13px;
+    color: #999;
+    margin-top: 5px;
+}
+
+/* ========== HÍRLEVÉL ========== */
+.newsletter-section {
+    padding: 80px 0;
+    background: var(--dark-blue);
+    text-align: center;
+    color: var(--white);
+}
+
+.newsletter-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: var(--gold);
+}
+
+.newsletter-section p {
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    opacity: 0.9;
+}
+
+.newsletter-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    gap: 15px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 16px 24px;
+    border: 2px solid var(--gold);
+    background: transparent;
+    color: var(--white);
+    font-size: 16px;
+}
+
+.newsletter-form input:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+.newsletter-form input::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+.newsletter-note {
+    margin-top: 30px;
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+/* ========== FOOTER ========== */
+footer {
+    background: var(--dark-blue);
+    color: var(--white);
+    padding: 60px 0 30px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--gold);
+}
+
+.footer-content .stars {
+    color: var(--gold);
+    font-size: 18px;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+}
+
+.footer-content p {
+    margin: 10px 0;
+    color: rgba(255,255,255,0.7);
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(197, 160, 89, 0.3);
+}
+
+.footer-bottom p {
+    color: rgba(255,255,255,0.5);
+    font-size: 12px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1200px) {
+    .main-nav {
+        gap: 15px 25px;
+    }
+    
+    .main-nav a {
+        font-size: 13px;
+        letter-spacing: 1.2px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hotel-name h1 {
+        font-size: 42px;
+        letter-spacing: 8px;
+    }
+    
+    .hotel-name .location {
+        letter-spacing: 10px;
+    }
+    
+    .main-nav {
+        gap: 12px 20px;
+        justify-content: center;
+    }
+    
+    .main-nav a {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+    
+    .hero-content h2,
+    .hero-content-unified h2 {
+        font-size: 48px;
+    }
+    
+    .kids-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .kids-images {
+        order: -1;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-unified {
+        min-height: auto;
+        padding-bottom: 60px;
+    }
+    
+    .hero-content-unified {
+        padding: 60px 20px;
+    }
+    
+    .hero-content-unified h2 {
+        font-size: 36px;
+        letter-spacing: 2px;
+    }
+    
+    .hero-content-unified p {
+        font-size: 16px;
+        letter-spacing: 3px;
+    }
+    
+    .hero-unified .nav-wrapper {
+        background: rgba(10, 30, 60, 0.3);
+    }
+    
+    .top-bar .container {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .hotel-name h1 {
+        font-size: 32px;
+        letter-spacing: 6px;
+    }
+    
+    .hotel-name .stars {
+        font-size: 18px;
+        letter-spacing: 6px;
+    }
+    
+    .hotel-name .location {
+        letter-spacing: 8px;
+        font-size: 11px;
+    }
+    
+    .main-nav {
+        flex-wrap: wrap !important;
+        justify-content: center;
+        gap: 10px 15px;
+        padding: 12px 15px;
+    }
+    
+    .main-nav a {
+        font-size: 12px;
+        letter-spacing: 1px;
+        padding: 6px 0;
+    }
+    
+    .hero-content h2 {
+        font-size: 36px;
+        letter-spacing: 2px;
+    }
+    
+    .hero-content p {
+        font-size: 16px;
+        letter-spacing: 3px;
+    }
+    
+    .btn-premium {
+        padding: 14px 32px;
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+    
+    .room-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+    
+    .wellness-section h2 {
+        font-size: 36px;
+    }
+    
+    .wellness-text {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+    
+    .kids-content h2 {
+        font-size: 32px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content-unified h2 {
+        font-size: 28px;
+    }
+    
+    .hero-content-unified p {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+    
+    .hotel-name h1 {
+        font-size: 24px;
+        letter-spacing: 4px;
+    }
+    
+    .main-nav {
+        gap: 8px 12px;
+        padding: 10px 10px;
+    }
+    
+    .main-nav a {
+        font-size: 11px;
+        letter-spacing: 0.8px;
+        padding: 5px 0;
+    }
+    
+    .hero-content h2 {
+        font-size: 28px;
+    }
+    
+    .hero-content p {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+    
+    .rooms-section h2 {
+        font-size: 28px;
+        letter-spacing: 2px;
+    }
+    
+    .kids-images {
+        grid-template-columns: 1fr;
+    }
+    
+    .image-offset {
+        margin-top: 0;
+    }
+    
+    .wellness-section h2 {
+        font-size: 28px;
+    }
+    
+    .newsletter-section h2 {
+        font-size: 28px;
+    }
+}
+
+/* ========== MODÁLIS ABLAK ========== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    overflow-y: auto;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: 40px auto;
+    max-width: 1000px;
+    width: 90%;
+    border-radius: 0;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+    position: relative;
+    animation: slideIn 0.3s;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-header {
+    padding: 30px 40px;
+    background: var(--dark-blue);
+    color: var(--white);
+    position: relative;
+    border-bottom: 3px solid var(--gold);
+}
+
+.modal-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin: 10px 0 0 0;
+    color: var(--gold);
+    letter-spacing: 2px;
+}
+
+.modal-room-number {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.close {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    color: var(--white);
+    font-size: 40px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: 0.3s;
+    line-height: 1;
+}
+
+.close:hover {
+    color: var(--gold);
+    transform: scale(1.1);
+}
+
+.modal-body {
+    padding: 40px;
+}
+
+.modal-main-image {
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+.modal-main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.modal-main-image img:hover {
+    transform: scale(1.02);
+}
+
+.modal-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.modal-gallery img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.3s;
+    opacity: 0.7;
+}
+
+.modal-gallery img:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.modal-gallery img.active {
+    border-color: var(--gold);
+    opacity: 1;
+}
+
+.modal-description {
+    margin-bottom: 30px;
+}
+
+.modal-description h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: var(--dark-blue);
+    margin-bottom: 15px;
+    border-left: 4px solid var(--gold);
+    padding-left: 15px;
+}
+
+.modal-description p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.modal-features {
+    margin-bottom: 30px;
+    background: var(--cream);
+    padding: 30px;
+}
+
+.modal-features h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+    border-left: 4px solid var(--gold);
+    padding-left: 15px;
+}
+
+.modal-features ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    list-style: none;
+}
+
+.modal-features li {
+    font-size: 15px;
+    color: #555;
+    padding: 8px 0;
+    border-bottom: 1px dashed rgba(197, 160, 89, 0.3);
+}
+
+.modal-price-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, var(--dark-blue), #0A1E3C);
+    padding: 30px;
+    border-left: 4px solid var(--gold);
+}
+
+.modal-price {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-label {
+    font-size: 14px;
+    color: var(--gold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.price-value {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.modal-price-section .btn-premium {
+    margin: 0;
+    padding: 16px 48px;
+}
+
+/* Gombok a szobakártyán */
+.room-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.room-buttons .btn-premium {
+    flex: 1;
+    text-align: center;
+    padding: 12px 20px !important;
+    font-size: 12px !important;
+}
+
+.btn-outline-dark {
+    background: transparent !important;
+    color: var(--dark-blue) !important;
+    border: 2px solid var(--dark-blue) !important;
+}
+
+.btn-outline-dark:hover {
+    background: var(--dark-blue) !important;
+    color: var(--white) !important;
+    border-color: var(--dark-blue) !important;
+}
+
+/* Reszponzív modális */
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 20px auto;
+        width: 95%;
+    }
+    
+    .modal-header {
+        padding: 20px;
+    }
+    
+    .modal-header h2 {
+        font-size: 24px;
+        padding-right: 40px;
+    }
+    
+    .close {
+        right: 20px;
+        top: 20px;
+        font-size: 30px;
+    }
+    
+    .modal-body {
+        padding: 20px;
+    }
+    
+    .modal-main-image {
+        height: 250px;
+    }
+    
+    .modal-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .modal-features ul {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-price-section {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .modal-price {
+        align-items: center;
+    }
+    
+    .price-value {
+        font-size: 28px;
+    }
+    
+    .room-buttons {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .modal-features {
+        padding: 20px;
+    }
+}
