@@ -246,7 +246,7 @@ $initial_total = $room['base_price'] * $initial_days;
                 <div class="hotel-name">
                     <h1>HOTEL SZALKA</h1>
                     <div class="stars">★★★★</div>
-                    <span class="location">MÁTÉSZALKA</span>
+                    <span class="location" style="color: #c5a059; letter-spacing: 27px;">MÁTÉSZALKA</span>
                 </div>
                 <div class="nav-wrapper">
                     <nav class="main-nav">
