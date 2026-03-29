@@ -1,0 +1,324 @@
+footer {
+    background: var(--dark-blue);
+    color: var(--white);
+    padding: 40px 0 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 30px 0;
+    border-top: 1px solid rgba(197, 160, 89, 0.2);
+    border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+.footer-col h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: var(--gold);
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: var(--gold);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.footer-stars {
+    color: var(--gold);
+    font-size: 16px;
+    letter-spacing: 4px;
+    margin-bottom: 5px;
+}
+
+.footer-tagline {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.8);
+}
+
+.contact-item .material-symbols-outlined {
+    color: var(--gold);
+    font-size: 18px;
+}
+
+.footer-col .footer-opening-hours {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 25px;
+    background: transparent;
+    padding: 0;
+}
+
+.footer-col .footer-hours-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    padding: 4px 0;
+    border-bottom: 1px dashed rgba(197, 160, 89, 0.2);
+    background: transparent;
+}
+
+.footer-col .footer-hours-item:last-child {
+    border-bottom: none;
+}
+
+.footer-col .footer-hours-day {
+    color: rgba(255,255,255,0.7);
+}
+
+.footer-col .footer-hours-time {
+    color: var(--gold);
+    font-weight: 600;
+}
+
+.footer-newsletter {
+    margin-top: 10px;
+}
+
+.newsletter-text {
+    font-size: 16px;
+    color: var(--gold);
+    margin-bottom: 12px;
+    line-height: 1.4;
+    font-weight: bold;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.newsletter-form input {
+    width: 100%;
+    padding: 10px 12px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    color: var(--white);
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+.newsletter-form input:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+.newsletter-form input::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+.newsletter-form button {
+    width: 100%;
+    padding: 10px;
+    background: var(--gold);
+    color: var(--dark-blue);
+    border: 2px solid var(--gold);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.newsletter-form button:hover {
+    background: transparent;
+    color: var(--gold);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+    transform: translateX(5px);
+}
+
+.footer-copyright {
+    text-align: center;
+    padding-top: 25px;
+}
+
+.footer-copyright p {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    margin: 0;
+}
+
+.newsletter-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: newsletterFadeIn 0.3s;
+}
+
+.newsletter-modal-content {
+    background: linear-gradient(135deg, var(--dark-blue) 0%, #1a2b3c 100%);
+    margin: 15% auto;
+    padding: 30px;
+    border: 2px solid var(--gold);
+    width: 90%;
+    max-width: 400px;
+    border-radius: 8px;
+    position: relative;
+    text-align: center;
+    color: var(--white);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    animation: newsletterSlideIn 0.3s;
+}
+
+.newsletter-close {
+    color: var(--gold);
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.newsletter-close:hover {
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+.newsletter-modal-icon {
+    margin-bottom: 20px;
+}
+
+.newsletter-modal-icon .material-symbols-outlined {
+    font-size: 60px;
+    color: var(--gold);
+}
+
+.newsletter-modal-content h3 {
+    font-size: 24px;
+    color: var(--gold);
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+}
+
+.newsletter-modal-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    color: rgba(255,255,255,0.9);
+}
+
+.newsletter-modal-button {
+    background: var(--gold);
+    color: var(--dark-blue);
+    border: 2px solid var(--gold);
+    padding: 10px 30px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 4px;
+}
+
+.newsletter-modal-button:hover {
+    background: transparent;
+    color: var(--gold);
+}
+
+/* Animációk */
+@keyframes newsletterFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes newsletterSlideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-columns {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-col {
+        text-align: center;
+    }
+    
+    .contact-item {
+        justify-content: center;
+    }
+    
+    .footer-col .hours-item {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        border-bottom: none;
+    }
+    
+    .footer-links a:hover {
+        transform: translateX(0) scale(1.05);
+    }
+    
+    .newsletter-form {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .newsletter-modal-content {
+        margin: 30% auto;
+        width: 95%;
+        padding: 20px;
+    }
+}

@@ -3,20 +3,18 @@ require_once 'config.php';
 include 'header.php';
 ?>
 
-<!-- KIEMELT SZOBÁK -->
+<link rel="stylesheet" href="css/index.css">
 <section class="rooms-section">
     <div class="container">
-        <h2>KIEMELT SZOBÁINK</h2>
-        <div class="section-subtitle">EXKLUZÍV KOMFORT MÁTÉSZALKÁN</div>
+        <h2>EXKLUZÍV SZOBÁINK</h2>
+        <div class="section-subtitle">KIEMELT KOMFORT MÁTÉSZALKÁN</div>
         
         <div class="room-grid">
                         <?php
-            // 3 szabad szoba lekérése (room_type_id-val együtt)
             $stmt = $pdo->query("SELECT r.*, rt.type_name as room_type_name FROM rooms r JOIN room_types rt ON r.room_type_id = rt.id WHERE r.status = 'available' ORDER BY RAND() LIMIT 3");
             
             if($stmt->rowCount() > 0):
                 while($room = $stmt->fetch()):
-                    // Fő kép lekérése a szobatípusból
                     $imageQuery = $pdo->prepare("
                         SELECT image_url FROM room_type_images 
                         WHERE room_type_id = ? AND is_main = 1 
@@ -25,7 +23,6 @@ include 'header.php';
                     $imageQuery->execute([$room['room_type_id']]);
                     $mainImage = $imageQuery->fetch();
                     
-                    // Ha nincs főkép, akkor bármelyik kép a típushoz
                     if (!$mainImage) {
                         $imageQuery = $pdo->prepare("
                             SELECT image_url FROM room_type_images 
@@ -36,9 +33,8 @@ include 'header.php';
                         $mainImage = $imageQuery->fetch();
                     }
                     
-                    $image = $mainImage ? $mainImage['image_url'] : 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80';
+                    $image = $mainImage ? $mainImage['image_url'] : '';
                     
-                    // További képek lekérése a szobatípusból (a főkép kivételével)
                     $galleryQuery = $pdo->prepare("
                         SELECT image_url FROM room_type_images 
                         WHERE room_type_id = ? AND is_main = 0 
@@ -48,7 +44,6 @@ include 'header.php';
                     $galleryQuery->execute([$room['room_type_id']]);
                     $galleryImages = $galleryQuery->fetchAll();
                     
-                    // Szoba jellemzők lekérése a szobatípusból
                     $featuresQuery = $pdo->prepare("SELECT feature_name FROM room_type_features WHERE room_type_id = ? ORDER BY id");
                     $featuresQuery->execute([$room['room_type_id']]);
                     $features = $featuresQuery->fetchAll();
@@ -91,7 +86,6 @@ include 'header.php';
     </div>
 </section>
 
-<!-- WELLNESS AJÁNLAT -->
 <section class="wellness-section">
     <div class="container">
         <h2>WELLNESS & SPA</h2>
@@ -104,7 +98,6 @@ include 'header.php';
     </div>
 </section>
 
-<!-- SZALKALAND GYEREKVILÁG -->
 <section class="kids-section">
     <div class="container">
         <div class="kids-grid">
@@ -126,7 +119,6 @@ include 'header.php';
     </div>
 </section>
 
-<!-- GASZTRONÓMIA BEJELENTKEZŐ -->
 <section class="gastro-preview-section">
     <div class="container">
         <div class="gastro-preview-grid">
@@ -180,166 +172,6 @@ include 'header.php';
     </div>
 </section>
 
-<style>
-/* Gasztronómia előnézet stílusok */
-.gastro-preview-section {
-    padding: 80px 0;
-    background: linear-gradient(135deg, #fff 0%, #fff8f0 100%);
-}
-
-.gastro-preview-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-}
-
-.gastro-preview-content {
-    padding-left: 30px;
-}
-
-.gastro-preview-content h2 {
-    font-size: 42px;
-    color: var(--dark-blue);
-    margin: 20px 0;
-    font-family: 'Playfair Display', serif;
-}
-
-.gastro-preview-text {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #666;
-    margin: 25px 0;
-}
-
-.gastro-highlights {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin: 30px 0;
-}
-
-.gastro-highlight-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 15px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-}
-
-.gastro-highlight-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(197, 160, 89, 0.1);
-}
-
-.gastro-highlight-item .material-symbols-outlined {
-    color: var(--gold);
-    font-size: 24px;
-}
-
-.gastro-highlight-item span:last-child {
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--dark-blue);
-}
-
-.gastro-preview-images {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    position: relative;
-}
-
-.gastro-preview-image {
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.gastro-preview-image:hover {
-    transform: scale(1.02);
-}
-
-.gastro-preview-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s;
-}
-
-.gastro-preview-image.main {
-    grid-column: span 2;
-    height: 300px;
-}
-
-.gastro-preview-image.small {
-    height: 150px;
-}
-
-.gastro-preview-image.small:last-child {
-    grid-column: span 2;
-    height: 180px;
-}
-
-@media (max-width: 992px) {
-    .gastro-preview-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    
-    .gastro-preview-content {
-        padding-left: 0;
-        order: 2;
-    }
-    
-    .gastro-preview-images {
-        order: 1;
-    }
-    
-    .gastro-highlights {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .gastro-preview-content h2 {
-        font-size: 32px;
-    }
-    
-    .gastro-highlights {
-        grid-template-columns: 1fr;
-    }
-    
-    .gastro-preview-image.main {
-        height: 250px;
-    }
-    
-    .gastro-preview-image.small {
-        height: 120px;
-    }
-}
-</style>
-
-<!-- JavaScript a modális ablakokhoz -->
-<script>
-
-// Fő kép cseréje a galériában
-function changeMainImage(roomId, imageSrc) {
-    document.getElementById('mainImage' + roomId).src = imageSrc;
-    
-    // Aktív állapot eltávolítása minden képről
-    var thumbnails = document.querySelectorAll('#roomModal' + roomId + ' .modal-gallery img');
-    thumbnails.forEach(function(img) {
-        img.classList.remove('active');
-    });
-    
-    // Aktív állapot beállítása a kattintott képre
-    event.target.classList.add('active');
-}
-</script>
+<script src="js/index.js"></script>
 
 <?php include 'footer.php'; ?>

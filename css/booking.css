@@ -1,0 +1,415 @@
+.booking-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.booking-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.booking-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+    letter-spacing: 4px;
+}
+
+.booking-header .subtitle {
+    color: var(--gold);
+    font-size: 16px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+.booking-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+}
+
+.room-preview {
+    background: var(--cream);
+    padding: 30px;
+    border: 1px solid var(--gold);
+    height: fit-content;
+}
+
+.room-preview h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+    border-left: 4px solid var(--gold);
+    padding-left: 15px;
+}
+
+.preview-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 1px solid var(--gold);
+}
+
+.preview-details {
+    margin-bottom: 20px;
+}
+
+.preview-details h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+}
+
+.preview-room-number {
+    color: var(--gold);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.room-selector {
+    margin-bottom: 15px;
+}
+
+.room-selector label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--dark-blue);
+}
+
+.room-selector select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--gold);
+    background: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.room-selector select:focus {
+    outline: none;
+    border-color: var(--dark-blue);
+}
+
+.room-selector small {
+    display: block;
+    margin-top: 5px;
+    color: var(--gold);
+    font-size: 12px;
+}
+
+.preview-features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 20px 0;
+    list-style: none;
+    padding: 0;
+}
+
+.preview-features-grid li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px dashed rgba(197, 160, 89, 0.2);
+    font-size: 14px;
+}
+
+.preview-features-grid .material-symbols-outlined {
+    color: var(--gold);
+    font-size: 18px;
+}
+
+.preview-price {
+    background: var(--dark-blue);
+    color: var(--white);
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.preview-price .price-label {
+    font-size: 14px;
+    color: var(--gold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.preview-price .price-value {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.booking-form {
+    background: var(--cream);
+    padding: 40px;
+    border: 2px solid var(--gold);
+}
+
+.booking-form h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: var(--dark-blue);
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--dark-blue);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid var(--gold);
+    background: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    resize: none;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-row-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.capacity-info {
+    font-size: 12px;
+    color: var(--gold);
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.btn-book {
+    width: 100%;
+    background: var(--gold);
+    color: var(--dark-blue);
+    padding: 16px;
+    border: 2px solid var(--gold);
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.btn-book:hover {
+    background: var(--dark-blue);
+    color: var(--white);
+    border-color: var(--dark-blue);
+}
+
+.btn-book:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: #ccc;
+    border-color: #999;
+    color: #666;
+}
+
+.error-message {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-left: 4px solid #dc3545;
+}
+
+.unavailable-warning {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-left: 4px solid #dc3545;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.date-unavailable {
+    border-color: #dc3545 !important;
+    background-color: #f8d7da !important;
+}
+
+.custom-calendar {
+    position: absolute;
+    background: white;
+    border: 2px solid var(--gold);
+    padding: 15px;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    width: 300px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.calendar-header button {
+    background: none;
+    border: 1px solid var(--gold);
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: var(--gold);
+    font-size: 12px;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.calendar-day {
+    padding: 8px 5px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+.calendar-day.available {
+    background-color: #e8f4e8;
+    color: #28a745;
+}
+
+.calendar-day.available:hover {
+    background-color: var(--gold);
+    color: white;
+}
+
+.calendar-day.unavailable {
+    background-color: #ffcccc;
+    color: #ff0000;
+    text-decoration: line-through;
+    cursor: not-allowed;
+}
+
+.calendar-day.past {
+    background-color: #e0e0e0;
+    color: #888;
+    text-decoration: line-through;
+    cursor: not-allowed;
+}
+
+.calendar-day.selected {
+    background-color: var(--gold);
+    color: var(--dark-blue);
+    font-weight: bold;
+}
+
+.room-unavailable-badge {
+    background: #dc3545;
+    color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    border-left: 4px solid #721c24;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.price-summary {
+    background: var(--dark-blue);
+    color: white;
+    padding: 5px;
+    margin: 5px 0;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.price-summary .price-label {
+    font-size: 14px;
+    color: var(--gold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.price-summary .price-detail {
+    font-size: 12px;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 5px;
+}
+
+.price-summary .price-value {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+@media (max-width: 992px) {
+    .booking-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .booking-header h1 {
+        font-size: 36px;
+    }
+    
+    .form-row,
+    .form-row-3 {
+        grid-template-columns: 1fr;
+    }
+    
+    .booking-form {
+        padding: 30px 20px;
+    }
+    
+    .preview-features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .price-summary .price-value {
+        font-size: 24px;
+    }
+}

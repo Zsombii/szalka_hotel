@@ -1,0 +1,428 @@
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.kids-intro {
+    padding: 60px 0;
+    background: var(--cream);
+    text-align: center;
+}
+
+.kids-intro h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--dark-blue);
+    margin-bottom: 15px;
+}
+
+.kids-intro .subtitle {
+    color: var(--gold);
+    font-size: 0.9rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.kids-intro p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    padding: 0 15px;
+}
+
+.playhouse-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 60px 30px;
+    background: var(--white);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.playhouse-item {
+    position: relative;
+    overflow: hidden;
+    border: 3px solid var(--gold);
+    border-radius: 8px;
+    transition: 0.3s;
+    aspect-ratio: 4 / 3;
+}
+
+.playhouse-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.playhouse-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.playhouse-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(10, 30, 60, 0.9);
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.kids-features {
+    padding: 60px 0;
+    background: var(--cream);
+    text-align: center;
+}
+
+.kids-features h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: var(--dark-blue);
+    margin-bottom: 40px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.feature-card {
+    background: var(--white);
+    padding: 30px 20px;
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(197, 160, 89, 0.2);
+}
+
+.feature-card .material-symbols-outlined {
+    font-size: 48px;
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-size: 1.3rem;
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.kids-programs {
+    background: linear-gradient(rgba(10,30,60,0.9), rgba(10,30,60,0.9)), 
+                url('');
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: var(--white);
+    text-align: center;
+}
+
+.kids-programs h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: var(--gold);
+    margin-bottom: 40px;
+}
+
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.program-card {
+    background: rgba(255,255,255,0.1);
+    padding: 25px;
+    border-bottom: 3px solid var(--gold);
+    border-radius: 8px;
+}
+
+.program-card h3 {
+    font-size: 1.3rem;
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+.program-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.9);
+}
+
+.program-time {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 4px 12px;
+    background: var(--gold);
+    color: var(--dark-blue);
+    font-weight: 600;
+    font-size: 0.75rem;
+    border-radius: 20px;
+}
+
+.kids-hours {
+    padding: 60px 0;
+    background: var(--dark-blue);
+    color: var(--white);
+    text-align: center;
+}
+
+.kids-hours h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: var(--gold);
+    margin-bottom: 30px;
+}
+
+.hours-box {
+    max-width: 500px;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.05);
+    padding: 30px;
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+}
+
+.hours-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+}
+
+.hours-row:last-child {
+    border-bottom: none;
+}
+
+.hours-day {
+    font-weight: 600;
+    color: var(--gold);
+}
+
+.hours-time {
+    color: var(--white);
+}
+
+.hours-note {
+    margin-top: 20px;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.8rem;
+}
+
+.main-header .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    padding: 15px 0;
+}
+
+.main-nav a {
+    padding: 8px 16px;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--gold);
+}
+
+.hotel-name {
+    text-align: center;
+}
+
+.hotel-name h1 {
+    font-size: 48px;
+    font-weight: 900;
+    margin: 0;
+    margin-bottom: 8px;
+    color: var(--white);
+}
+
+.hotel-name .stars {
+    font-size: 20px;
+    letter-spacing: 8px;
+}
+
+.hotel-name .location {
+    font-size: 0.8rem;
+    letter-spacing: 12px;
+}
+
+@media (max-width: 1024px) {
+    .playhouse-grid {
+        gap: 20px;
+        padding: 40px 20px;
+    }
+    
+    .features-grid,
+    .programs-grid {
+        gap: 20px;
+        padding: 0 15px;
+    }
+    
+    .kids-intro h2,
+    .kids-features h2,
+    .kids-programs h2,
+    .kids-hours h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .playhouse-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 30px 20px;
+    }
+    
+    .playhouse-item {
+        max-width: 100%;
+        aspect-ratio: 16 / 9;
+    }
+    
+    .playhouse-caption {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .feature-card {
+        max-width: 100%;
+        padding: 25px 20px;
+    }
+    
+    .programs-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .program-card {
+        padding: 20px;
+    }
+    
+    .kids-intro {
+        padding: 40px 0;
+    }
+    
+    .kids-intro h2 {
+        font-size: 1.8rem;
+    }
+    
+    .kids-intro .subtitle {
+        font-size: 0.7rem;
+        letter-spacing: 3px;
+    }
+    
+    .kids-intro p {
+        font-size: 0.9rem;
+    }
+    
+    .kids-features h2,
+    .kids-programs h2,
+    .kids-hours h2 {
+        font-size: 1.6rem;
+    }
+    
+    .hours-box {
+        margin: 0 15px;
+        padding: 20px;
+    }
+    
+    .hours-row {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+    
+    .hotel-name h1 {
+        font-size: 1.8rem !important;
+    }
+    
+    .main-nav {
+        gap: 3px;
+    }
+    
+    .main-nav a {
+        padding: 6px 10px;
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .kids-intro h2 {
+        font-size: 1.5rem;
+    }
+    
+    .kids-features h2,
+    .kids-programs h2,
+    .kids-hours h2 {
+        font-size: 1.4rem;
+    }
+    
+    .feature-card h3,
+    .program-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .main-nav a {
+        padding: 5px 8px;
+        font-size: 0.65rem;
+    }
+    
+    .hotel-name h1 {
+        font-size: 1.5rem !important;
+    }
+    
+    .playhouse-grid {
+        padding: 20px 15px;
+        gap: 20px;
+    }
+}
