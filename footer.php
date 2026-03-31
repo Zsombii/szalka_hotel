@@ -54,7 +54,8 @@
                 <ul class="footer-links">
                     <li><a href="https://drive.google.com/drive/folders/1owGcCeL6zjsVe8SV8cUl6bRLc6JdeyhN?usp=sharing" target="_blank">Google Drive</a></li>
                     <li><a href="https://github.com/Zsombii/szalka_hotel" target= "_blank">GitHub</a></li>
-                    <li><a href="#" target="_blank">Dokumentációk</a></li>
+                    <li><a href="https://docs.google.com/presentation/d/1GwsQob7YaO8N0EFFi6EjSZBfaN55Rnxn/edit?usp=sharing&ouid=103444524099013280860&rtpof=true&sd=true" target="_blank">Prezentáció</a></li>
+                    <li><a href="https://docs.google.com/spreadsheets/d/1TzVre6qYbkvlFm3gwImhZpvO_NpAmuG6/edit?usp=sharing&ouid=103444524099013280860&rtpof=true&sd=true" target="_blank">Tevékenységnapló</a></li>
                     <li><a href="dokumentacio/fejlesztoi.html" target="_blank">Fejlesztői dokumentáció</a></li>
                     <li><a href="dokumentacio/felhasznaloi.html" target="_blank">Felhasználói dokumentáció</a></li>
                     <li><a href="dokumentacio/teszteloi.html" target="_blank">Tesztelői dokumentáció</a></li>
