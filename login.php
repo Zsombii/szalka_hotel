@@ -71,6 +71,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
         
         <a href="index.php" class="back-link">Vissza a főoldalra</a>
+        <div class="info-box">
+            <p>Felhasználónév: admin</p>
+            <p>Jelszó: admin</p>
+        </div>
         
     </div>
 </body>

@@ -524,7 +524,7 @@ $active_section = isset($_GET['section']) ? $_GET['section'] : 'dashboard';
                 </div>
                 
                 <div style="margin-top: 20px; text-align: right; font-size: 13px; color: #999;">
-                    📧 Hírlevél feliratkozók: <strong><?php echo $newsletter_count; ?></strong> fő
+                    Hírlevél feliratkozók: <strong><?php echo $newsletter_count; ?></strong> fő
                 </div>
             <?php endif; ?>
             
@@ -894,6 +894,7 @@ $active_section = isset($_GET['section']) ? $_GET['section'] : 'dashboard';
                                         <th>Távozás</th>
                                         <th>Éj</th>
                                         <th>Vendégek</th>
+                                        <th>Megjegyzés</th>
                                         <th>Összeg</th>
                                         <th>Státusz</th>
                                         <th>Műveletek</th>
@@ -917,6 +918,15 @@ $active_section = isset($_GET['section']) ? $_GET['section'] : 'dashboard';
                                                 <td><?php echo date('Y-m-d', strtotime($booking['check_out'])); ?></td>
                                                 <td><?php echo $booking['nights']; ?></td>
                                                 <td><?php echo $booking['adults'] + $booking['children']; ?> fő</td>
+                                                <td style="max-width: 250px;">
+                                                    <?php 
+                                                    if (!empty($booking['special_requests'])) {
+                                                        echo '<textarea readonly style="width: 100%; min-height: 30px; padding: 5px; font-size: 11px; border: 1px solid #ddd; background: #f9f9f9; resize: vertical; font-family: inherit;">' . htmlspecialchars($booking['special_requests']) . '</textarea>';
+                                                    } else {
+                                                        echo '<span style="color: #999; font-style: italic;">-</span>';
+                                                    }
+                                                    ?>
+                                                </td>
                                                 <td><?php echo number_format($booking['total_price'], 0, ',', ' '); ?> Ft</td>
                                                 <td>
                                                     <span class="status-badge status-<?php echo $booking['status']; ?>">

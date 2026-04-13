@@ -256,6 +256,7 @@ $initial_total = $room['base_price'] * $initial_days;
                         <a href="kids.php">SZALKALAND GYEREKVILÁG</a>
                         <a href="gastronomy.php">GASZTRONÓMIA</a>
                         <a href="gallery.php">GALÉRIA</a>
+                        <a href="#doc-links">DOKUMENTÁCIÓ</a>
                     </nav>
                 </div>
             </div>

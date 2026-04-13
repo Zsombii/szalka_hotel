@@ -27,6 +27,7 @@
                         <a href="kids.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'kids.php' ? 'active' : ''; ?>">SZALKALAND GYEREKVILÁG</a>
                         <a href="gastronomy.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'gastronomy.php' ? 'active' : ''; ?>">GASZTRONÓMIA</a>
                         <a href="gallery.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'gallery.php' ? 'active' : ''; ?>">GALÉRIA</a>
+                        <a href="#doc-links">DOKUMENTÁCIÓ</a>
                     </nav>
                 </div>
             </div>

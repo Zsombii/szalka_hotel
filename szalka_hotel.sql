@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Gép: 127.0.0.1
--- Létrehozás ideje: 2026. Már 29. 22:28
--- Kiszolgáló verziója: 10.4.32-MariaDB
--- PHP verzió: 8.2.12
+-- Gép: mysql.omega:3306
+-- Létrehozás ideje: 2026. Ápr 13. 20:39
+-- Kiszolgáló verziója: 5.7.42-log
+-- PHP verzió: 7.2.34-61+0~20260213.113+debian12~1.gbp7055a0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -32,16 +32,16 @@ CREATE TABLE `admin_users` (
   `username` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
   `email` varchar(100) DEFAULT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `last_login` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- A tábla adatainak kiíratása `admin_users`
 --
 
 INSERT INTO `admin_users` (`id`, `username`, `password`, `email`, `created_at`, `last_login`) VALUES
-(1, 'admin', '$2y$10$4tAs9vdP20nLMGRZ5ONzEuw7PdYbIYI1BlgHvTK0gIg4f8VHRiNRW', 'admin@szalkahotel.hu', '2026-02-25 21:32:18', '2026-03-29 08:02:20');
+(1, 'admin', '$2y$10$4tAs9vdP20nLMGRZ5ONzEuw7PdYbIYI1BlgHvTK0gIg4f8VHRiNRW', 'admin@szalkahotel.hu', '2026-02-25 21:32:18', '2026-04-13 18:21:09');
 
 -- --------------------------------------------------------
 
@@ -52,17 +52,17 @@ INSERT INTO `admin_users` (`id`, `username`, `password`, `email`, `created_at`, 
 CREATE TABLE `bookings` (
   `id` int(11) NOT NULL,
   `room_id` int(11) NOT NULL,
-  `guest_name` varchar(100) NOT NULL,
-  `guest_email` varchar(100) NOT NULL,
-  `guest_phone` varchar(20) NOT NULL,
+  `guest_name` varchar(100) COLLATE utf8mb4_hungarian_ci NOT NULL,
+  `guest_email` varchar(100) COLLATE utf8mb4_hungarian_ci NOT NULL,
+  `guest_phone` varchar(20) COLLATE utf8mb4_hungarian_ci NOT NULL,
   `check_in` date NOT NULL,
   `check_out` date NOT NULL,
-  `adults` int(11) NOT NULL DEFAULT 2,
-  `children` int(11) NOT NULL DEFAULT 0,
+  `adults` int(11) NOT NULL DEFAULT '2',
+  `children` int(11) NOT NULL DEFAULT '0',
   `total_price` int(11) NOT NULL,
-  `special_requests` text DEFAULT NULL,
-  `status` enum('pending','confirmed','cancelled') DEFAULT 'pending',
-  `booking_date` datetime DEFAULT current_timestamp()
+  `special_requests` text COLLATE utf8mb4_hungarian_ci,
+  `status` enum('pending','confirmed','cancelled') COLLATE utf8mb4_hungarian_ci DEFAULT 'pending',
+  `booking_date` datetime DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
 
 --
@@ -78,11 +78,12 @@ INSERT INTO `bookings` (`id`, `room_id`, `guest_name`, `guest_email`, `guest_pho
 (14, 7, 'asd', 'asd@asd.com', '0342334', '2026-03-19', '2026-03-20', 1, 1, 11500, 'asdadsdsaasdadsdas', 'confirmed', '2026-03-16 09:24:59'),
 (15, 7, 'asd', 'asd@asd.com', '0342334', '2026-03-16', '2026-03-17', 2, 0, 11500, 'cvdfgrtghdf', 'confirmed', '2026-03-16 09:25:41'),
 (17, 1, 'asd', 'asd@asd.com', '0342334', '2026-03-18', '2026-03-20', 2, 0, 44000, '', 'confirmed', '2026-03-16 09:29:26'),
-(18, 5, 'kiss imre', 'kissimre@gmailc.om', '203678855', '2026-03-23', '2026-03-28', 2, 0, 90000, 'szopjatok le', 'confirmed', '2026-03-18 08:09:27'),
 (19, 7, 'asd', 'asdsad@sdsade.com', '+456456456', '2026-03-22', '2026-03-29', 1, 1, 80500, 'sadsad', 'confirmed', '2026-03-20 09:46:46'),
 (20, 7, 'asd', 'asd@asd.com', '0342334', '2026-03-29', '2026-03-30', 2, 0, 11021, '', 'confirmed', '2026-03-24 14:06:43'),
 (21, 7, 'Hhhh', 'hb@ass.com', '06301234567', '2026-03-31', '2026-04-01', 2, 0, 11500, '', 'confirmed', '2026-03-26 10:45:11'),
-(22, 1, 'dfsea', 'asd@sad.com', '06701213232', '2026-04-08', '2026-04-12', 1, 1, 88000, 'dsa', 'confirmed', '2026-03-29 10:31:35');
+(22, 1, 'dfsea', 'asd@sad.com', '06701213232', '2026-04-08', '2026-04-12', 1, 1, 88000, 'dsa', 'confirmed', '2026-03-29 10:31:35'),
+(23, 7, 'sdf', 'asd@sad.com', '06701213232', '2026-03-30', '2026-03-31', 1, 1, 11500, 'dsad', 'confirmed', '2026-03-29 23:00:00'),
+(24, 7, 'oo', 'kicsi@gail.com', '021321312131', '2026-04-14', '2026-04-15', 2, 0, 11500, '', 'confirmed', '2026-04-13 09:23:48');
 
 -- --------------------------------------------------------
 
@@ -92,7 +93,7 @@ INSERT INTO `bookings` (`id`, `room_id`, `guest_name`, `guest_email`, `guest_pho
 
 CREATE TABLE `newsletter` (
   `id` int(11) NOT NULL,
-  `email` varchar(100) NOT NULL
+  `email` varchar(100) COLLATE utf8mb4_hungarian_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
 
 --
@@ -123,11 +124,11 @@ CREATE TABLE `rooms` (
   `room_number` varchar(10) NOT NULL,
   `type` varchar(50) NOT NULL,
   `price` int(11) NOT NULL,
-  `description` text DEFAULT NULL,
-  `detailed_description` text DEFAULT NULL,
+  `description` text,
+  `detailed_description` text,
   `image` varchar(255) DEFAULT NULL,
   `status` enum('available','booked') DEFAULT 'available'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- A tábla adatainak kiíratása `rooms`
@@ -149,13 +150,13 @@ INSERT INTO `rooms` (`id`, `room_type_id`, `room_number`, `type`, `price`, `desc
 CREATE TABLE `room_types` (
   `id` int(11) NOT NULL,
   `type_name` varchar(100) NOT NULL,
-  `description` text DEFAULT NULL,
-  `detailed_description` text DEFAULT NULL,
+  `description` text,
+  `detailed_description` text,
   `base_price` int(11) NOT NULL,
-  `max_guests` int(11) DEFAULT 2,
+  `max_guests` int(11) DEFAULT '2',
   `size_sqm` int(11) DEFAULT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- A tábla adatainak kiíratása `room_types`
@@ -179,7 +180,7 @@ CREATE TABLE `room_type_features` (
   `room_type_id` int(11) NOT NULL,
   `feature_name` varchar(100) NOT NULL,
   `feature_icon` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- A tábla adatainak kiíratása `room_type_features`
@@ -247,9 +248,9 @@ CREATE TABLE `room_type_images` (
   `id` int(11) NOT NULL,
   `room_type_id` int(11) NOT NULL,
   `image_url` varchar(500) NOT NULL,
-  `is_main` tinyint(1) DEFAULT 0,
-  `sort_order` int(11) DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `is_main` tinyint(1) DEFAULT '0',
+  `sort_order` int(11) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- A tábla adatainak kiíratása `room_type_images`
@@ -346,7 +347,7 @@ ALTER TABLE `admin_users`
 -- AUTO_INCREMENT a táblához `bookings`
 --
 ALTER TABLE `bookings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT a táblához `newsletter`

@@ -35,6 +35,7 @@ require_once 'config.php';
                         <a href="kids.php">SZALKALAND GYEREKVILÁG</a>
                         <a href="gastronomy.php">GASZTRONÓMIA</a>
                         <a href="gallery.php">GALÉRIA</a>
+                        <a href="#doc-links">DOKUMENTÁCIÓ</a>
                     </nav>
                 </div>
             </div>
