@@ -50,17 +50,18 @@
             </div>
 
             <div class="footer-col">
-                <h4>INFORMÁCIÓK</h4>
+                <h4>DOKUMENTÁCIÓ</h4>
                 <ul class="footer-links" id="doc-links">
-                    <li><a href="https://drive.google.com/drive/folders/1owGcCeL6zjsVe8SV8cUl6bRLc6JdeyhN?usp=sharing" target="_blank">Google Drive</a></li>
+                    <li><a href="dokumentacio/vizsgaremek.html" target="_blank">Vizsgaremek dokumentáció</a></li>
                     <li><a href="https://github.com/Zsombii/szalka_hotel" target= "_blank">Forráskód</a></li>
-                    <li><a href="https://docs.google.com/presentation/d/1GwsQob7YaO8N0EFFi6EjSZBfaN55Rnxn/edit?usp=sharing&ouid=103444524099013280860&rtpof=true&sd=true" target="_blank">Prezentáció</a></li>
                     <li><a href="https://docs.google.com/spreadsheets/d/1TzVre6qYbkvlFm3gwImhZpvO_NpAmuG6/edit?usp=sharing&ouid=103444524099013280860&rtpof=true&sd=true" target="_blank">Tevékenységnapló</a></li>
                     <li><a href="https://drive.google.com/file/d/1Z4LKf8WNca7EbbOdFbumby8qXexvGJN5/view?usp=sharing" target="_blank">SQL file</a></li>
-                    <li><a href="https://drive.google.com/file/d/1hQT3hfCnDdX9TTMtu8fPsX99uY3fQAoo/view?usp=sharing" target="_blank">ER diagram</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1owGcCeL6zjsVe8SV8cUl6bRLc6JdeyhN?usp=sharing" target="_blank">Google Drive</a></li>
                     <li><a href="dokumentacio/fejlesztoi.html" target="_blank">Fejlesztői dokumentáció</a></li>
                     <li><a href="dokumentacio/felhasznaloi.html" target="_blank">Felhasználói dokumentáció</a></li>
                     <li><a href="dokumentacio/teszteloi.html" target="_blank">Tesztelői dokumentáció</a></li>
+                    <li><a href="https://drive.google.com/file/d/1hQT3hfCnDdX9TTMtu8fPsX99uY3fQAoo/view?usp=sharing" target="_blank">ER diagram</a></li>
+                    <li><a href="https://docs.google.com/presentation/d/1GwsQob7YaO8N0EFFi6EjSZBfaN55Rnxn/edit?usp=sharing&ouid=103444524099013280860&rtpof=true&sd=true" target="_blank">Prezentáció</a></li>
                 </ul>
             </div>
         </div>
